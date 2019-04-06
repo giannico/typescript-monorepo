@@ -11,11 +11,12 @@
   "main": "dist",
   "typings": "dist/index.d.ts",
   "scripts": {
+    "clean": "rimraf dist tsconfig.tsbuildinfo",
     "build": "tsc -b",
     "prestart": "yarn run build",
     "start": "node dist/index.js",
     "dev": "tsc-watch -b --onSuccess \"node ./dist/index.js\"",
-    "clean": "rimraf dist tsconfig.tsbuildinfo"
+    "lint": "tslint --project tsconfig.json"
   },
   "dependencies": {
     "@typescript-monorepo/common": "0.0.1"

@@ -12,6 +12,7 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist tsconfig.tsbuildinfo",
-    "build": "tsc -b"
+    "build": "tsc -b",
+    "lint": "tslint --project tsconfig.json"
   }
 }

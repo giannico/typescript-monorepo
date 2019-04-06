@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "clean": "yarn workspaces run clean",
+    "lint": "yarn workspaces run lint",
     "build": "tsc --build ./packages",
     "web:start": "yarn workspace @typescript-monorepo/web start",
     "web:dev": "yarn workspace @typescript-monorepo/web dev"
@@ -24,7 +25,8 @@
     "npm-run-all": "4.1.5",
     "rimraf": "2.6.3",
     "tsc-watch": "2.1.2",
-    "tslint": "5.15.0"
+    "tslint": "5.15.0",
+    "tslint-config-prettier": "1.18.0"
   },
   "keywords": [
     "typescript",
