@@ -1,0 +1,34 @@
+{
+  "description": "A TypeScript monorepo utilizing TypeScript project references and yarn workspaces",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Andre Giannico <andre@andregiannico.com> (https://andregiannico.com/)",
+  "repository": "https://github.com/giannico/typescript-monorepo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "yarn workspaces run clean",
+    "build": "tsc --build ./packages",
+    "web:start": "yarn workspace @typescript-monorepo/web start",
+    "web:dev": "yarn workspace @typescript-monorepo/web dev"
+  },
+  "dependencies": {
+    "typescript": "3.4.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5",
+    "rimraf": "2.6.3",
+    "tsc-watch": "2.1.2",
+    "tslint": "5.15.0"
+  },
+  "keywords": [
+    "typescript",
+    "yarn",
+    "monorepo"
+  ]
+}

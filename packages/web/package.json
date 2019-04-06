@@ -1,0 +1,23 @@
+{
+  "name": "@typescript-monorepo/web",
+  "description": "A sample subpackage, representing some web application",
+  "version": "0.0.1",
+  "author": "Andre Giannico <andre@andregiannico.com> (https://andregiannico.com/)",
+  "repository": "https://github.com/giannico/typescript-monorepo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "dist",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "prestart": "yarn run build",
+    "start": "node dist/index.js",
+    "dev": "tsc-watch -b --onSuccess \"node ./dist/index.js\"",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@typescript-monorepo/common": "0.0.1"
+  }
+}

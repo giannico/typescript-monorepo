@@ -1,0 +1,17 @@
+{
+  "name": "@typescript-monorepo/common",
+  "description": "A sample subpackage, representing some common code",
+  "version": "0.0.1",
+  "author": "Andre Giannico <andre@andregiannico.com> (https://andregiannico.com/)",
+  "repository": "https://github.com/giannico/typescript-monorepo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "dist",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist tsconfig.tsbuildinfo",
+    "build": "tsc -b"
+  }
+}
