@@ -83,6 +83,9 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-dist/
+# OSX
+.DS_Store
 
+# TypeScript build assets
+dist/
 tsconfig.tsbuildinfo

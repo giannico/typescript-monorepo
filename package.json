@@ -15,18 +15,22 @@
     "clean": "yarn workspaces run clean",
     "lint": "yarn workspaces run lint",
     "build": "tsc --build ./packages",
+    "dev": "run-p api:dev web:dev",
+    "start": "run-p api:start web:start",
+    "api:start": "yarn workspace @typescript-monorepo/api start",
+    "api:dev": "yarn workspace @typescript-monorepo/api dev",
     "web:start": "yarn workspace @typescript-monorepo/web start",
-    "web:dev": "yarn workspace @typescript-monorepo/web dev"
+    "web:dev": "yarn workspace @typescript-monorepo/web dev",
+    "all:dev": "run-p api:dev web:dev"
   },
-  "dependencies": {
-    "typescript": "3.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "npm-run-all": "4.1.5",
     "rimraf": "2.6.3",
     "tsc-watch": "2.1.2",
     "tslint": "5.15.0",
-    "tslint-config-prettier": "1.18.0"
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "3.4.1"
   },
   "keywords": [
     "typescript",
